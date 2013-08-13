@@ -40,16 +40,16 @@ grails.project.dependency.resolution = {
     //mavenRepo "http://repository.jboss.com/maven2/"
   }
 
-  dependencies {
-    // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
-
-    // runtime 'mysql:mysql-connector-java:5.1.22'
-  }
+  dependencies { // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
+    runtime 'mysql:mysql-connector-java:5.1.22' }
 
   plugins {
     runtime ":hibernate:$grailsVersion"
     runtime ":jquery:1.8.3"
     runtime ":resources:1.2"
+    compile ":spring-security-core:1.2.7.3"
+    compile ":quartz:1.0-RC9"
+    compile ":grails-melody:1.46"
 
     // Uncomment these (or add new ones) to enable additional resources capabilities
     //runtime ":zipped-resources:1.0"
@@ -60,6 +60,7 @@ grails.project.dependency.resolution = {
 
     runtime ":database-migration:1.3.2"
 
-    compile ':cache:1.0.1'
+    compile ':cache:1.1.1'
+    runtime ":ui-performance:1.2.2"
   }
 }
