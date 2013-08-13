@@ -1,11 +1,14 @@
 package com.incra
 
+import grails.validation.Validateable
+
 /**
  * This was derived from the Grails In Action book.
  * 
  * @author Jeffrey Risberg
  * @since September 2010
  */
+@Validateable
 class UserRegistrationCommand {
 
   String userId
